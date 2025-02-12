@@ -1,0 +1,8 @@
+Spring Session требует специальную схему для хранения сессий в базе данных.
+Если вы используете spring.jpa.hibernate.ddl-auto=update, Hibernate может попытаться создать таблицы,
+но это может быть не совсем корректно для Spring Session.
+Лучше использовать SQL скрипт, предоставляемый Spring Session, для создания таблиц.
+Скрипт можно найти в JAR файле spring-session-jdbc (внутри org/springframework/session/jdbc).
+Он называется schema-mysql.sql (или аналогичный для вашей базы данных).
+Выполните этот скрипт в вашей базе данных MySQL.
+
